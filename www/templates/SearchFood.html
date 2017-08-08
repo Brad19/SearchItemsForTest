@@ -4,7 +4,7 @@
               <div class="bar bar-header item-input-inset">
                 <label class="item-input-wrapper">
                   <i class="icon ion-ios-search placeholder-icon"></i>
-                   <input type="tel" placeholder="Search by Pin code" ng-model="Model.Pin">
+                   <input type="tel" placeholder="Search by Category" ng-model="Model.Category">
                 </label>
                 <button class="button button-assertive" ng-click="submit()" name="Search">
                   <i class="ion-ios-search"></i>
@@ -26,7 +26,6 @@
                 </ion-list>
                 <ion-infinite-scroll ng-if="canWeLoadMoreContent()" icon="ion-loading-c" on-infinite="loadMore()" distance="10%"></ion-infinite-scroll>
            </div>
-        <!--<span us-spinner="{radius:5, width:2, length: 8}"></span>-->
         </ion-content>
 </ion-view>
 

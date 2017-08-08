@@ -28,7 +28,7 @@ angular.module('starter.services', [])
 
 .factory('GetSearch', function($http, $ionicLoading){
   return {
-      results : function (email, pin, callback) {
+      results : function (email, category, callback) {
            var url = `${index.APP_URL}/SearchItems`;
            var request = $http({
                     method: 'POST',
@@ -41,7 +41,7 @@ angular.module('starter.services', [])
                     return str.join("&");
                    },
                    data: {
-                    Pincode: pin,
+                    Category: category,
                     Email : email
                    }
            });

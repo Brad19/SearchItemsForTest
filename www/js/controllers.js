@@ -24,13 +24,13 @@ angular.module('starter.controllers',['ngCordova'])
     $scope.submit = function() {
         let letters = /^[a-zA-Z]+$/;
         let numbers = /^[0-9]+$/;
-        let pinVal = $scope.Model.Pin;
+        let category = $scope.Model.Category;
         $scope.dishList='';
         start = 0;end=0;index=0;
         searchResult ='';
         originalResult ='';
-        if (pinVal !== null && pinVal.match(numbers)) {
-            GetSearch.results(localStorage.getItem("email"), $scope.Model.Pin, function (result) {
+        if (category !== null && !category.match(numbers)) {
+            GetSearch.results(localStorage.getItem("email"), $scope.Model.Category, function (result) {
                 if (result.length > 0) {
                      result.sort(function(compare, compareWith){
                          return (compareWith.dishId > compare.dishId ? 1 : -1);
@@ -52,7 +52,7 @@ angular.module('starter.controllers',['ngCordova'])
             });
 
         } else {
-             let message = index.PIN_CODE_MSG;
+             let message = index.INVALID_MSG;
              Flash.create('warning', message, 'custom-class');
         }
    };

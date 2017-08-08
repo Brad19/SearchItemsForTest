@@ -1,0 +1,8 @@
+{
+  "name": "SearchItems",
+  "app_id": "123456",
+  "type": "ionic",
+  "watchPatterns": [
+    "scss/**/*"
+  ]
+}

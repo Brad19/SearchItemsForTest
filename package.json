@@ -1,0 +1,50 @@
+{
+    "name": "Search-Items",
+    "version": "0.0.1",
+    "description": "Search: An Ionic project",
+    "dependencies": {
+        "angular-flash-alert": "^1.1.1",
+        "angular-loading-bar": "^0.9.0",
+        "angular-loading-spinner": "0.0.3",
+        "asyn": "0.0.1",
+        "aws-sdk": "^2.4.11",
+        "bcrypt": "^0.8.7",
+        "body-parser": "^1.14.0",
+        "call-number": "^0.0.2",
+        "connect-multiparty": "^2.0.0",
+        "cordova-android": "^6.2.3",
+        "cordova-ios": "^4.4.0",
+        "gulp": "^3.5.6",
+        "gulp-concat": "^2.2.0",
+        "gulp-minify-css": "^0.3.0",
+        "gulp-rename": "^1.2.0",
+        "gulp-sass": "^2.0.4",
+        "ionic-plugin-keyboard": "^2.2.1",
+        "multer": "^1.1.0",
+        "mysql": "^2.9.0"
+    },
+    "devDependencies": {
+        "@ionic/cli-plugin-cordova": "1.4.1",
+        "@ionic/cli-plugin-gulp": "1.0.2",
+        "@ionic/cli-plugin-ionic1": "2.0.1",
+        "bower": "^1.3.3",
+        "gulp-util": "^2.2.14",
+        "ionic": "3.6.0",
+        "shelljs": "^0.3.0"
+    },
+    "cordovaPlugins": [
+        "ionic-plugin-keyboard"
+    ],
+    "cordovaPlatforms": [
+        "ios"
+    ],
+    "cordova": {
+        "platforms": [
+            "android",
+            "ios"
+        ],
+        "plugins": {
+            "ionic-plugin-keyboard": {}
+        }
+    }
+}

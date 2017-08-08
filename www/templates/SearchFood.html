@@ -1,0 +1,32 @@
+<ion-view view-title="Search" hide-nav-bar="false">
+        <ion-content lazy-scroll>
+            <form name="tab-SearchFood.form">
+              <div class="bar bar-header item-input-inset">
+                <label class="item-input-wrapper">
+                  <i class="icon ion-ios-search placeholder-icon"></i>
+                   <input type="tel" placeholder="Search by Pin code" ng-model="Model.Pin">
+                </label>
+                <button class="button button-assertive" ng-click="submit()" name="Search">
+                  <i class="ion-ios-search"></i>
+                </button>
+              </div>
+            </form>
+            <div flash-message="10000"></div>
+            <div style="position:absolute;left:0;right:0">
+                <ion-list class="list list-inset">
+                    <ion-item ng-repeat="dish in dishList" class="item-remove-animate item-thumbnail-left item-icon-right" type="item-text-wrap">
+                        <img image-lazy-src="{{dish.targetPath}}" image-lazy-loader="ios" ng-click="getItem(dish.dishId)">
+                        <a href="" ng-click="getDish(dish.MyHunt_DishId)">
+                          <h2>{{dish.name}}</h2> 
+                          <h2>${{dish.price}}</h2>
+                          <h2>{{dish.desc}}
+                        </a>
+                       <i class="icon ion-chevron-right icon-accessory"></i>
+                    </ion-item>
+                </ion-list>
+                <ion-infinite-scroll ng-if="canWeLoadMoreContent()" icon="ion-loading-c" on-infinite="loadMore()" distance="10%"></ion-infinite-scroll>
+           </div>
+        <!--<span us-spinner="{radius:5, width:2, length: 8}"></span>-->
+        </ion-content>
+</ion-view>
+
